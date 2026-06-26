@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- SEO OBRIGATÓRIO -->
+    <title>Connecta | Agência de Marketing Digital que Gera Resultado</title>
+    <meta name="description" content="A Connecta é a agência de marketing digital que transforma cliques em clientes. Tráfego pago, social media e estratégia de performance para escalar o seu negócio.">
+
+    <!-- Open Graph OBRIGATÓRIO -->
+    <meta property="og:title" content="Connecta | Agência de Marketing Digital que Gera Resultado">
+    <meta property="og:description" content="Transformamos cliques em clientes. Tráfego pago, social media e estratégia de performance para escalar o seu negócio com previsibilidade.">
+    <meta property="og:type" content="website">
+
+    <!-- Responsividade -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tracking base obrigatório -->
+    <script src="/static/tracking.js"></script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --azul: #0066ff;
+            --azul-escuro: #0a2540;
+            --azul-medio: #0b3d91;
+            --azul-claro: #e8f0fe;
+            --texto: #1e293b;
+            --texto-suave: #475569;
+            --branco: #ffffff;
+        }
+        html { scroll-behavior: smooth; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: var(--texto); background: var(--branco); }
+
+        /* NAV */
+        .nav { display: flex; align-items: center; justify-content: space-between; max-width: 1100px; margin: 0 auto; padding: 1.2rem 1.5rem; }
+        .logo { font-size: 1.5rem; font-weight: 800; color: var(--branco); letter-spacing: -.5px; display: flex; align-items: center; gap: .4rem; }
+        .logo .dot { color: #38bdf8; }
+        .nav a.nav-cta { background: var(--branco); color: var(--azul-medio); padding: .6rem 1.4rem; border-radius: 50px; font-weight: 700; text-decoration: none; font-size: .95rem; transition: transform .2s, box-shadow .2s; }
+        .nav a.nav-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,.2); }
+
+        /* HERO */
+        .hero { background: linear-gradient(135deg, var(--azul-escuro), var(--azul-medio)); color: var(--branco); position: relative; overflow: hidden; }
+        .hero::after { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 75% 30%, rgba(56,189,248,.25), transparent 55%); pointer-events: none; }
+        .hero-inner { max-width: 800px; margin: 0 auto; text-align: center; padding: 4rem 1.5rem 5rem; position: relative; z-index: 1; }
+        .hero .tag { display: inline-block; background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.25); color: #e8f0fe; padding: .4rem 1.2rem; border-radius: 50px; font-weight: 600; font-size: .85rem; letter-spacing: .5px; margin-bottom: 1.5rem; }
+        .hero h1 { font-size: 3rem; line-height: 1.15; margin-bottom: 1.2rem; font-weight: 800; letter-spacing: -1px; }
+        .hero h1 span { color: #38bdf8; }
+        .hero p { font-size: 1.25rem; opacity: .9; margin-bottom: 2.2rem; max-width: 640px; margin-left: auto; margin-right: auto; }
+        .cta-button { display: inline-block; padding: 1.1rem 2.8rem; font-size: 1.15rem; font-weight: 700; color: var(--branco); background: var(--azul); border: none; border-radius: 50px; cursor: pointer; transition: transform .2s, box-shadow .3s; text-decoration: none; box-shadow: 0 10px 30px rgba(0,102,255,.4); }
+        .cta-button:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 14px 36px rgba(0,102,255,.55); }
+        .hero .reassure { display: block; margin-top: 1rem; font-size: .9rem; opacity: .7; }
+
+        /* TRUST BAR */
+        .trust { background: var(--azul-claro); padding: 1.5rem; text-align: center; }
+        .trust p { color: var(--azul-medio); font-weight: 600; font-size: .95rem; letter-spacing: .5px; text-transform: uppercase; opacity: .8; }
+
+        /* SECTIONS */
+        main { max-width: 1000px; margin: 0 auto; padding: 0 1.5rem; }
+        .section { padding: 4rem 0; }
+        .section-head { text-align: center; max-width: 680px; margin: 0 auto 2.5rem; }
+        .section-head h2 { font-size: 2.1rem; color: var(--azul-escuro); margin-bottom: .8rem; font-weight: 800; letter-spacing: -.5px; }
+        .section-head p { font-size: 1.1rem; color: var(--texto-suave); }
+
+        /* PROBLEMA */
+        .pain { background: var(--azul-claro); border-radius: 16px; padding: 2.5rem; }
+        .pain ul { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+        .pain li { background: var(--branco); padding: 1.2rem 1.4rem; border-radius: 10px; font-weight: 500; color: var(--texto); border-left: 4px solid #ef4444; }
+
+        /* SERVIÇOS */
+        .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; }
+        .card { background: var(--branco); border: 1px solid #e2e8f0; padding: 2rem; border-radius: 16px; transition: transform .25s, box-shadow .25s, border-color .25s; }
+        .card:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(11,61,145,.12); border-color: var(--azul); }
+        .card .ico { width: 52px; height: 52px; display: flex; align-items: center; justify-content: center; background: var(--azul-claro); color: var(--azul); border-radius: 12px; font-size: 1.6rem; margin-bottom: 1.2rem; }
+        .card h3 { color: var(--azul-escuro); margin-bottom: .6rem; font-size: 1.25rem; }
+        .card p { color: var(--texto-suave); font-size: 1rem; }
+
+        /* NÚMEROS */
+        .stats { background: linear-gradient(135deg, var(--azul-escuro), var(--azul-medio)); border-radius: 20px; padding: 3rem 2rem; color: var(--branco); display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 2rem; text-align: center; }
+        .stat .num { font-size: 2.6rem; font-weight: 800; color: #38bdf8; line-height: 1; }
+        .stat .lbl { font-size: .95rem; opacity: .85; margin-top: .5rem; }
+
+        /* PROCESSO */
+        .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; counter-reset: step; }
+        .step { position: relative; padding: 1.8rem; background: var(--branco); border: 1px solid #e2e8f0; border-radius: 14px; }
+        .step::before { counter-increment: step; content: counter(step); position: absolute; top: -16px; left: 1.8rem; width: 36px; height: 36px; background: var(--azul); color: var(--branco); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; }
+        .step h3 { color: var(--azul-escuro); margin: .8rem 0 .5rem; font-size: 1.15rem; }
+        .step p { color: var(--texto-suave); font-size: .98rem; }
+
+        /* DEPOIMENTOS */
+        .quotes { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+        .quote { background: var(--branco); border: 1px solid #e2e8f0; border-radius: 16px; padding: 2rem; }
+        .quote p { font-style: italic; color: var(--texto); margin-bottom: 1.2rem; }
+        .quote .author { font-weight: 700; color: var(--azul-escuro); }
+        .quote .role { font-size: .9rem; color: var(--texto-suave); }
+        .quote .stars { color: #f59e0b; margin-bottom: .8rem; letter-spacing: 2px; }
+
+        /* FAQ */
+        .faq-item { border-bottom: 1px solid #e2e8f0; padding: 1.3rem 0; }
+        .faq-item h3 { font-size: 1.12rem; color: var(--azul-escuro); margin-bottom: .5rem; }
+        .faq-item p { color: var(--texto-suave); }
+
+        /* CTA FINAL */
+        .final-cta { background: linear-gradient(135deg, var(--azul-medio), var(--azul)); border-radius: 24px; text-align: center; padding: 3.5rem 2rem; color: var(--branco); margin-bottom: 4rem; position: relative; overflow: hidden; }
+        .final-cta::after { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 50% 0%, rgba(255,255,255,.18), transparent 60%); }
+        .final-cta h2 { font-size: 2.2rem; margin-bottom: .8rem; position: relative; z-index: 1; font-weight: 800; }
+        .final-cta p { font-size: 1.15rem; opacity: .92; margin-bottom: 2rem; position: relative; z-index: 1; }
+        .final-cta .cta-button { background: var(--branco); color: var(--azul-medio); position: relative; z-index: 1; box-shadow: 0 10px 30px rgba(0,0,0,.25); }
+
+        /* FOOTER */
+        footer { background: var(--azul-escuro); color: #94a3b8; text-align: center; padding: 2.5rem 1.5rem; }
+        footer .logo { justify-content: center; margin-bottom: .8rem; font-size: 1.3rem; }
+        footer p { font-size: .9rem; }
+        footer a { color: #38bdf8; text-decoration: none; }
+
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 2.1rem; }
+            .hero p { font-size: 1.1rem; }
+            .section { padding: 3rem 0; }
+            .section-head h2 { font-size: 1.7rem; }
+            .nav .logo { font-size: 1.3rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HERO + NAV -->
+    <section class="hero">
+        <nav class="nav">
+            <div class="logo">Connecta<span class="dot">.</span></div>
+            <a class="nav-cta" href="#contato" onclick="trackCTA('nav')">Falar com especialista</a>
+        </nav>
+        <div class="hero-inner">
+            <span class="tag">Agência de Marketing Digital de Performance</span>
+            <h1>Transformamos cliques em <span>clientes de verdade</span></h1>
+            <p>Mais do que campanhas bonitas, entregamos previsibilidade de vendas. Estratégia, tráfego pago e conteúdo trabalhando juntos para escalar o seu faturamento.</p>
+            <a class="cta-button" href="#contato" onclick="trackCTA('hero')">Quero crescer com a Connecta</a>
+            <span class="reassure">Diagnóstico gratuito · Sem compromisso · Resposta em até 24h</span>
+        </div>
+    </section>
+
+    <!-- TRUST -->
+    <div class="trust">
+        <p>+120 empresas atendidas · +R$ 8 milhões investidos em mídia · 9 nichos diferentes</p>
+    </div>
+
+    <main>
+
+        <!-- PROBLEMA -->
+        <section class="section">
+            <div class="section-head">
+                <h2>Investir em marketing não pode ser um tiro no escuro</h2>
+                <p>Se você se identifica com alguma dessas situações, a gente precisa conversar.</p>
+            </div>
+            <div class="pain">
+                <ul>
+                    <li>Você impulsiona posts, mas não sabe quanto isso vira em vendas.</li>
+                    <li>Já contratou agência antes e só recebeu relatório bonito, sem resultado.</li>
+                    <li>O Instagram cresce, mas o telefone não toca e o caixa não muda.</li>
+                    <li>Falta tempo e equipe para cuidar do marketing com consistência.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- SERVIÇOS -->
+        <section class="section">
+            <div class="section-head">
+                <h2>O que a Connecta faz pelo seu negócio</h2>
+                <p>Um time completo de especialistas conectados a um único objetivo: o seu crescimento.</p>
+            </div>
+            <div class="cards">
+                <div class="card">
+                    <div class="ico">📈</div>
+                    <h3>Tráfego Pago</h3>
+                    <p>Campanhas no Google, Meta e TikTok otimizadas diariamente para gerar o menor custo por cliente possível.</p>
+                </div>
+                <div class="card">
+                    <div class="ico">📱</div>
+                    <h3>Social Media</h3>
+                    <p>Conteúdo estratégico que constrói autoridade, engaja a audiência certa e prepara o terreno para a venda.</p>
+                </div>
+                <div class="card">
+                    <div class="ico">🎯</div>
+                    <h3>Estratégia & Funil</h3>
+                    <p>Planejamento de aquisição ponta a ponta, do primeiro clique ao fechamento, com metas claras.</p>
+                </div>
+                <div class="card">
+                    <div class="ico">🎨</div>
+                    <h3>Criativos que Convertem</h3>
+                    <p>Design e copy testados continuamente para encontrar o anúncio que faz o seu público agir.</p>
+                </div>
+                <div class="card">
+                    <div class="ico">🌐</div>
+                    <h3>Landing Pages</h3>
+                    <p>Páginas rápidas e otimizadas para conversão, integradas ao seu funil e ao rastreamento de resultados.</p>
+                </div>
+                <div class="card">
+                    <div class="ico">📊</div>
+                    <h3>Dados & Relatórios</h3>
+                    <p>Dashboards transparentes que mostram exatamente para onde vai cada real investido e o retorno gerado.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- NÚMEROS -->
+        <section class="section">
+            <div class="stats">
+                <div class="stat"><div class="num">+120</div><div class="lbl">Clientes atendidos</div></div>
+                <div class="stat"><div class="num">+R$ 8mi</div><div class="lbl">Investidos em mídia</div></div>
+                <div class="stat"><div class="num">4,8x</div><div class="lbl">ROAS médio das contas</div></div>
+                <div class="stat"><div class="num">98%</div><div class="lbl">De clientes que renovam</div></div>
+            </div>
+        </section>
+
+        <!-- PROCESSO -->
+        <section class="section">
+            <div class="section-head">
+                <h2>Como a gente trabalha</h2>
+                <p>Um processo simples e transparente, do diagnóstico ao resultado.</p>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <h3>Diagnóstico</h3>
+                    <p>Entendemos seu negócio, suas metas e o cenário atual para identificar as maiores oportunidades.</p>
+                </div>
+                <div class="step">
+                    <h3>Estratégia</h3>
+                    <p>Montamos um plano de mídia e conteúdo sob medida, com metas e indicadores definidos.</p>
+                </div>
+                <div class="step">
+                    <h3>Execução</h3>
+                    <p>Colocamos as campanhas no ar e otimizamos diariamente com base em dados reais.</p>
+                </div>
+                <div class="step">
+                    <h3>Escala</h3>
+                    <p>Ampliamos o que funciona e cortamos o que não traz retorno, crescendo com previsibilidade.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- DEPOIMENTOS -->
+        <section class="section">
+            <div class="section-head">
+                <h2>Quem cresce com a Connecta recomenda</h2>
+                <p>Resultados reais de quem confiou na nossa estratégia.</p>
+            </div>
+            <div class="quotes">
+                <div class="quote">
+                    <div class="stars">★★★★★</div>
+                    <p>"Em 3 meses dobramos o número de orçamentos pedidos pelo site. Finalmente entendi para onde vai meu investimento em anúncios."</p>
+                    <div class="author">Mariana Alves</div>
+                    <div class="role">Clínica Odontológica</div>
+                </div>
+                <div class="quote">
+                    <div class="stars">★★★★★</div>
+                    <p>"A Connecta tratou o meu negócio como se fosse deles. Transparência total nos relatórios e resultado no caixa."</p>
+                    <div class="author">Rafael Souza</div>
+                    <div class="role">E-commerce de Moda</div>
+                </div>
+                <div class="quote">
+                    <div class="stars">★★★★★</div>
+                    <p>"Saímos de campanhas no escuro para um funil previsível. Hoje sei quanto preciso investir para vender mais."</p>
+                    <div class="author">Patrícia Lima</div>
+                    <div class="role">Curso Online</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="section">
+            <div class="section-head">
+                <h2>Perguntas frequentes</h2>
+            </div>
+            <div class="faq-item">
+                <h3>Qual o investimento mínimo para começar?</h3>
+                <p>Trabalhamos com planos sob medida de acordo com o porte e o objetivo do seu negócio. No diagnóstico gratuito definimos juntos o melhor ponto de partida.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Em quanto tempo vejo resultado?</h3>
+                <p>As primeiras otimizações acontecem já nas primeiras semanas. Resultados consistentes de escala costumam aparecer entre o segundo e o terceiro mês.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Vocês atendem o meu segmento?</h3>
+                <p>Já atuamos em mais de 9 nichos diferentes, de serviços locais a e-commerce. No diagnóstico avaliamos o potencial específico do seu mercado.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Preciso ter perfil grande nas redes sociais?</h3>
+                <p>Não. Construímos a presença digital do zero quando necessário e focamos no que realmente gera vendas para o seu momento.</p>
+            </div>
+        </section>
+
+        <!-- CTA FINAL -->
+        <section class="final-cta" id="contato">
+            <h2>Vamos conectar o seu negócio a mais clientes?</h2>
+            <p>Solicite um diagnóstico gratuito e descubra o potencial de crescimento da sua empresa.</p>
+            <a class="cta-button" href="https://wa.me/5500000000000?text=Quero%20um%20diagn%C3%B3stico%20gratuito%20com%20a%20Connecta" target="_blank" rel="noopener" onclick="trackCTA('final')">Quero meu diagnóstico gratuito</a>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="logo">Connecta<span class="dot">.</span></div>
+        <p>Agência de Marketing Digital de Performance</p>
+        <p style="margin-top:.6rem;">&copy; 2026 Connecta. Todos os direitos reservados. · <a href="#contato" onclick="trackCTA('footer')">Fale conosco</a></p>
+    </footer>
+
+    <!-- Tracking: UTM + eventos obrigatórios (fallback caso /static/tracking.js não defina) -->
+    <script>
+        (function () {
+            // Captura e persiste UTM parameters
+            var params = new URLSearchParams(window.location.search);
+            var keys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
+            var utms = {};
+            keys.forEach(function (k) { if (params.get(k)) utms[k] = params.get(k); });
+            window.__utms = utms;
+            try { sessionStorage.setItem('connecta_utms', JSON.stringify(utms)); } catch (e) {}
+
+            // Anexa UTMs ao link de WhatsApp para preservar a origem
+            if (Object.keys(utms).length) {
+                document.querySelectorAll('a[href*="wa.me"]').forEach(function (a) {
+                    var url = new URL(a.href);
+                    keys.forEach(function (k) { if (utms[k]) url.searchParams.set(k, utms[k]); });
+                    a.href = url.toString();
+                });
+            }
+
+            // Evento obrigatório: page_view automático
+            window.addEventListener('load', function () {
+                if (typeof window.trackPageView === 'function') { window.trackPageView(); }
+                console.log('page_view', utms);
+            });
+
+            // Evento obrigatório: click_cta (fallback se tracking.js não definir)
+            if (typeof window.trackCTA !== 'function') {
+                window.trackCTA = function (label) {
+                    console.log('click_cta', label || 'cta', window.__utms || {});
+                };
+            }
+        })();
+    </script>
+
+</body>
+</html>
