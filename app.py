@@ -1,7 +1,9 @@
-from flask import Flask, render_template, jsonify, abort
+from flask import Flask, render_template, jsonify, abort, send_from_directory
 import os
 
 app = Flask(__name__)
+
+IMAGENS_DIR = os.path.join(app.root_path, "img")
 
 @app.route("/<slug>")
 def lp(slug):
@@ -16,4 +18,4 @@ def list_slugs():
     return {str(i): f.replace(".html", "") for i, f in enumerate(slug_list)}
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=False)
+    app.run(host="0.0.0.0", port=5006, debug=False)
